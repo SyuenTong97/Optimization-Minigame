@@ -1,0 +1,11 @@
+.vs/
+/bin
+/obj
+/bin
+/obj
+My project/Library
+My project/Logs
+My project/Temp
+My project/.vsconfig
+My project/*.sln
+My project/*.csproj
