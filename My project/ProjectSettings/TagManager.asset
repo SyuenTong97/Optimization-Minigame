@@ -6,17 +6,19 @@ TagManager:
   tags:
   - Enemy
   - Coin
+  - EnemyBullet
+  - FriendlyBullet
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Enemy
+  - Coin
+  - EnemyBullet
+  - FriendlyBullet
   - 
   - 
   - 
