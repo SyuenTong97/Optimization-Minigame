@@ -13,11 +13,15 @@ public class EnemyController : MonoBehaviour
     public float fireRate = 0.1f;
     private float nextFireTime;
 
+    public GameObject itemDrop;
+    private int dropNum;
+
     Vector2 wayPoint;
 
     // Start is called before the first frame update
     void Start()
     {
+        dropNum = Random.Range(1, 3);
         player = GameObject.FindGameObjectWithTag("Player").transform;
         rb = this.GetComponent<Rigidbody2D>();
         SetNewDestination();
@@ -53,7 +57,10 @@ public class EnemyController : MonoBehaviour
     {
         if (collision.gameObject.tag == "FriendlyBullet")
         {
-
+            if(dropNum == 1)
+            {
+                Instantiate(itemDrop, transform.position, Quaternion.identity);
+            }
             Destroy(gameObject);
         }
     }
